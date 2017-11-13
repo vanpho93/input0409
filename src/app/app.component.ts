@@ -13,7 +13,7 @@ export class AppComponent {
     { en: 'Three', vn: 'Ba' }
   ];
 
-  removeWord(en) {
+  onRemove(en) {
     const index = this.words.findIndex(e => e.en === en);
     this.words.splice(index, 1);
   }

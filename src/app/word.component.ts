@@ -13,9 +13,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class WordComponent {
     @Input() wordObj: string;
-    @Output() myClick = new EventEmitter();
+    @Output() onRemove = new EventEmitter();
 
     remove() {
-        this.myClick.emit();
+        this.onRemove.emit();
     }
 }
