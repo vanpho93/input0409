@@ -12,4 +12,9 @@ export class AppComponent {
     { en: 'Two', vn: 'Hai' },
     { en: 'Three', vn: 'Ba' }
   ];
+
+  removeWord(en) {
+    const index = this.words.findIndex(e => e.en === en);
+    this.words.splice(index, 1);
+  }
 }

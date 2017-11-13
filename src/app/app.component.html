@@ -1,2 +1,5 @@
-<!-- <app-word *ngFor="let word of words" [wordObj]="word"></app-word> -->
-<app-parent></app-parent>
+<app-word
+    *ngFor="let word of words"
+    [wordObj]="word"
+    (myClick)="removeWord(word.en)"></app-word>
+<!-- <app-parent></app-parent> -->

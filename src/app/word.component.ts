@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-word',
@@ -6,11 +6,16 @@ import { Component, Input } from '@angular/core';
         <div>
             <h3>{{wordObj.en}}</h3>
             <p>{{wordObj.vn}}</p>
-            <button>Xoa</button>
+            <button (click)="remove();">Xoa</button>
         </div>
     `
 })
 
 export class WordComponent {
     @Input() wordObj: string;
+    @Output() myClick = new EventEmitter();
+
+    remove() {
+        this.myClick.emit();
+    }
 }
