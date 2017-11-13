@@ -5,12 +5,15 @@ import { Component } from '@angular/core';
     template: `
         <div>
             <h3>Value: {{value}}</h3>
-            <button>Increase</button>
-            <app-child></app-child>
+            <button (click)="increase()">Increase</button>
+            <app-child (myClick)="increase()"></app-child>
         </div>
     `
 })
 
 export class ParentComponent {
     value = 1;
+    increase() {
+        this.value++;
+    }
 }
