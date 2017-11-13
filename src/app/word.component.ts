@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
         <div>
             <h3>{{wordObj.en}}</h3>
             <p>{{wordObj.vn}}</p>
+            <button>Xoa</button>
         </div>
     `
 })

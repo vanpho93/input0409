@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { WordComponent } from './word.component';
+import { ChildComponent } from './interaction/child.component';
+import { ParentComponent } from './interaction/parent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WordComponent
+    WordComponent,
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule
