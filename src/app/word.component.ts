@@ -4,13 +4,12 @@ import { Component, Input } from '@angular/core';
     selector: 'app-word',
     template: `
         <div>
-            <h3>{{en}}</h3>
-            <p>{{vn}}</p>
+            <h3>{{wordObj.en}}</h3>
+            <p>{{wordObj.vn}}</p>
         </div>
     `
 })
 
 export class WordComponent {
-    @Input() en: string;
-    @Input() vn: string;
+    @Input() wordObj: string;
 }

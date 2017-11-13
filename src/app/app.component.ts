@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  words = [
+    { en: 'One', vn: 'Mot' },
+    { en: 'Two', vn: 'Hai' },
+    { en: 'Three', vn: 'Ba' }
+  ];
 }
