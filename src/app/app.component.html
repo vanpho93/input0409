@@ -1,8 +1,4 @@
-<input placeholder="English" [(ngModel)]="txtEn">
-<br>
-<input placeholder="Vietnamese" [(ngModel)]="txtVn">
-<br>
-<button (click)="onAdd()">Add</button>
+<app-word-form></app-word-form>
 <app-word
     *ngFor="let word of words"
     [wordObj]="word"
