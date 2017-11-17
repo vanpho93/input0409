@@ -1,4 +1,10 @@
-<app-word-form (onAdd)="onAdd($event)"></app-word-form>
+<app-word-form
+    (onAdd)="onAdd($event)"
+    (onToggleIsShowForm)="onToggleIsShowForm()"
+    *ngIf="isShowForm"
+    >
+</app-word-form>
+<button *ngIf="!isShowForm" (click)="onToggleIsShowForm();">Show Form</button>
 <app-word
     *ngFor="let word of words"
     [wordObj]="word"

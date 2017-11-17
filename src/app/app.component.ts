@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  isShowForm = false;
   words = [
     { en: 'One', vn: 'Mot', isMemorized: true },
     { en: 'Two', vn: 'Hai', isMemorized: false },
@@ -25,5 +25,9 @@ export class AppComponent {
   onToggle(en) {
     const word = this.words.find(e => e.en === en);
     word.isMemorized = !word.isMemorized;
+  }
+
+  onToggleIsShowForm() {
+    this.isShowForm = !this.isShowForm;
   }
 }
