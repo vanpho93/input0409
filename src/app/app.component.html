@@ -1,4 +1,4 @@
-<app-word-form></app-word-form>
+<app-word-form (onAdd)="onAdd($event)"></app-word-form>
 <app-word
     *ngFor="let word of words"
     [wordObj]="word"

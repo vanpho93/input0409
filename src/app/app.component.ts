@@ -13,15 +13,12 @@ export class AppComponent {
     { en: 'Three', vn: 'Ba' }
   ];
 
-  txtEn = '';
-  txtVn = '';
-
   onRemove(en) {
     const index = this.words.findIndex(e => e.en === en);
     this.words.splice(index, 1);
   }
 
-  onAdd() {
-    this.words.push({ en: this.txtEn, vn: this.txtVn });
+  onAdd(word) {
+    this.words.push(word);
   }
 }
