@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   words = [
-    { en: 'One', vn: 'Mot' },
-    { en: 'Two', vn: 'Hai' },
-    { en: 'Three', vn: 'Ba' }
+    { en: 'One', vn: 'Mot', isMemorized: true },
+    { en: 'Two', vn: 'Hai', isMemorized: false },
+    { en: 'Three', vn: 'Ba', isMemorized: true }
   ];
 
   onRemove(en) {
@@ -20,5 +20,10 @@ export class AppComponent {
 
   onAdd(word) {
     this.words.push(word);
+  }
+
+  onToggle(en) {
+    const word = this.words.find(e => e.en === en);
+    word.isMemorized = !word.isMemorized;
   }
 }

@@ -2,5 +2,7 @@
 <app-word
     *ngFor="let word of words"
     [wordObj]="word"
-    (onRemove)="onRemove(word.en)"></app-word>
+    (onRemove)="onRemove(word.en)"
+    (onToggle)="onToggle(word.en)"    
+></app-word>
 <!-- <app-parent></app-parent> -->
